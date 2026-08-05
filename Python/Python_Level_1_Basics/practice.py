@@ -1,0 +1,17 @@
+import numpy
+numpy.set_printoptions(legacy='1.13')
+
+N ,M=map(int,input().split())
+
+arr = []
+for i in range(N):
+    row = list(map(int,input().split()))
+    arr.append(row)
+    
+arr = numpy.array(arr)
+
+print(numpy.mean(arr, axis=1))
+print(numpy.var(arr, axis=0))
+print(numpy.std(arr, axis=None))
+
+
